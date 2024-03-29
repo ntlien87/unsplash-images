@@ -4,10 +4,8 @@ import SingleImage from './SingleImage'
 import Loading from './Loading'
 import { useAppContext } from '../context'
 
-const url = `https://api.unsplash.com/search/collections?client_id=${
-  import.meta.env.VITE_ACCESS_KEY
-}`
-
+const api_key = import.meta.env.VITE_ACCESS_KEY
+const url = `https://api.unsplash.com/search/collections?client_id=${api_key}`
 
 const Gallery = () => {
   const { searchValue } = useAppContext()
